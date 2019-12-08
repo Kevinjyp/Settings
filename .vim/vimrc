@@ -1,0 +1,39 @@
+let mapleader=" "
+syntax on
+
+set number
+set norelativenumber
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+set hlsearch
+exec "nohlsearch"
+set incsearch
+set ignorecase
+set smartcase
+set backspace=indent,eol,start
+
+map s <nop>
+map S :w<CR>
+map Q :q<CR>
+map R :source $MYVIMRC<CR>
+map <LEADER><CR> :noh<CR>
+
+noremap = nzz
+noremap - Nzz
+noremap h i
+noremap i k
+noremap k j
+noremap j h
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'connorholyday/vim-snazzy'
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
+
+color snazzy
+
