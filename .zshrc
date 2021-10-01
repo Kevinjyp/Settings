@@ -4,8 +4,8 @@ export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kevinjyp/.oh-my-zsh"
-PATH="/Applications/CMake.app/Contents/bin":"$PATH"
-PATH="/library/Developer/CommandLineTools/usr/bin":"$PATH"
+# export PATH="/Users/kevinjyp/Tools/anaconda3/bin:$PATH"  # commented out by conda initialize
+export PATH="/usr/local/opt/go@1.15/bin:$PATH"
 # export PATH="PATH:~/Documents/makefile_test"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -89,4 +89,29 @@ source $ZSH/custom/plugins/zsh-git-prompt/zshrc.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias C="clear"
 alias vim="/usr/local/opt/vim/bin/vim"
+alias T="tree"
+alias ls="exa"
+alias cat="bat"
 alias ra="ranger"
+alias la="exa -lah"
+alias git="/usr/local/opt/git/bin/git"
+alias python3="/Users/kevinjyp/Tools/anaconda3/bin/python3"
+alias py3="python3"
+eval "$(mcfly init zsh)"
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/kevinjyp/Tools/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/kevinjyp/Tools/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kevinjyp/Tools/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/kevinjyp/Tools/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
